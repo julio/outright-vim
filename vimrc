@@ -190,4 +190,24 @@ set wildignore+=**/log/**,*.orig,*.swp
 
 " This will allow you to sudo from within vim to save a file that you dont
 " have write permissions on
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
+
+" CTRL-X will split the window then put your cursor in the buffer you split
+" from
+map <C-X> :sp<CR><C-W><C-W><CR>
+
+" CTRL-F will run Ggrep for global search
+map <C-F> :Ggrep
+
+" With the tComment plugin, CMD-/ will comment in visual mode
+vmap <D-/> gc
+
+" In insert mode o will create a new line below the cursor and put your cursor
+" in edit mode in that buffer
+imap <C-Return> <Esc>o
+
+" CTRL-O will create a new line below your cursor and not be in insert mode
+nmap <C-O> o<Esc>
+
+" CTRL-SHIFT-O will create a new line above your cursor and not be in insert mode
+nmap <C-S-O> O<Esc>
