@@ -201,6 +201,7 @@ map <C-F> :Ggrep
 
 " With the tComment plugin, CMD-/ will comment in visual mode
 vmap <D-/> gc
+nmap <D-/> Vgc<ESC>
 
 " In insert mode o will create a new line below the cursor and put your cursor
 " in edit mode in that buffer
