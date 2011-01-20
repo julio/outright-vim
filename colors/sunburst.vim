@@ -44,7 +44,7 @@ hi Todo         guifg=#fd5ff1 guibg=#000000 gui=italic,underline
 hi PreProc      guifg=#9b859d
 hi Visual                     guibg=#242424
 hi VisualNOS                  guibg=#202020
-hi Comment      guifg=#3f3f3f               gui=italic
+hi Comment      guifg=#7f7f7f               gui=italic
 hi Constant     guifg=#3387cc
 hi Directory    guifg=#3387cc
 hi LineNr       guifg=#666666 guibg=#121212
