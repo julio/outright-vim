@@ -208,11 +208,10 @@ nmap <D-/> Vgc<ESC>
 imap <C-Return> <Esc>o
 
 " CTRL-O will create a new line below your cursor and not be in insert mode
-nmap <C-O> o<Esc>
+map <C-O> o<Esc>
 
-" CTRL-SHIFT-O will create a new line above your cursor and not be in insert mode
-nmap <C-S-O> O<Esc>
-
+" CTRL-A will create a new line above your cursor and not be in insert mode
+map <C-A> O<Esc>
 
 function! Html2Haml()
   let fileext = expand("%:e")
