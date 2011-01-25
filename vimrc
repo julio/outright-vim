@@ -98,11 +98,11 @@ let mapleader = "\\"
 " map <Leader>v :Rview 
 " map <Leader>u :Runittest 
 " map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
+" map <Leader>tm :RTmodel 
+" map <Leader>tc :RTcontroller 
+" map <Leader>tv :RTview 
+" map <Leader>tu :RTunittest 
+" map <Leader>tf :RTfunctionaltest 
 map <Leader>sm :RSmodel 
 map <Leader>sc :RScontroller 
 map <Leader>sv :RSview 
