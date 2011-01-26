@@ -197,7 +197,7 @@ command! W w !sudo tee % > /dev/null
 map <C-X> :sp<CR><C-W><C-W><CR>
 
 " CTRL-F will run Ggrep for global search
-map <C-F> :Ggrep
+map <C-F> :Ggrep<Space>
 
 " With the tComment plugin, CMD-/ will comment in visual mode
 vmap <D-/> gc
@@ -213,6 +213,10 @@ map <C-O> o<Esc>
 " CTRL-A will create a new line above your cursor and not be in insert mode
 map <C-A> O<Esc>
 
+" Will trim all whitespace off the end of each line
+command! Respace %s/\(\s\+\)\(\n\)/\2/
+
+" CTRL-H will convert an erb file to Haml
 function! Html2Haml()
   let fileext = expand("%:e")
   if fileext == "erb"
