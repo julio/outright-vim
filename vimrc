@@ -197,7 +197,7 @@ command! W w !sudo tee % > /dev/null
 map <C-X> :sp<CR><C-W><C-W><CR>
 
 " CTRL-F will run Ggrep for global search
-map <C-F> :Ggrep<Space>
+map <C-F> :Ack<Space>
 
 " With the tComment plugin, CMD-/ will comment in visual mode
 vmap <D-/> gc
