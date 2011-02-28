@@ -235,3 +235,6 @@ function! Html2Haml()
 endfunction
 
 map <silent> <C-H> :call Html2Haml()<CR>
+
+" CTRL-Q wiill un-highlight the search results
+map <silent> <C-Q> :noh<CR>
