@@ -15,7 +15,8 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
 " Color scheme
-colorscheme sunburst
+set t_Co=256 " Set 256 colors
+autocmd VimEnter * GuiColorScheme sunburst
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
