@@ -16,7 +16,11 @@ set incsearch		" do incremental searching
 
 " Color scheme
 set t_Co=256 " Set 256 colors
-autocmd VimEnter * GuiColorScheme sunburst
+if !has("gui_running")
+  autocmd VimEnter * GuiColorScheme sunburst
+else
+  colorscheme sunburst
+endif
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -188,7 +192,7 @@ map <F2> :source $MYVIMRC<CR>:echoe "Vimrc Reloaded!!!"<CR>
 set statusline=%<\ %n:%f\ %y\ %{fugitive#statusline()}\ %m%r%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 " GLobally ignore files and directories
-set wildignore+=**/log/**,*.orig,*.swp
+set wildignore+=**/log/**,*.orig,*.swp,*.rbc,*.pyc
 
 " This will allow you to sudo from within vim to save a file that you dont
 " have write permissions on
@@ -198,7 +202,7 @@ command! W w !sudo tee % > /dev/null
 " from
 map <C-X> :sp<CR><C-W><C-W><CR>
 
-" CTRL-F will run Ggrep for global search
+" CTRL-F will run Ack for global search
 map <C-F> :Ack<Space>
 
 " With the tComment plugin, CMD-/ will comment in visual mode
@@ -238,7 +242,4 @@ endfunction
 
 map <silent> <C-H> :call Html2Haml()<CR>
 
-" CTRL-Q wiill un-highlight the search results
-map <silent> <C-Q> :noh<CR>
-
-set clipboard=unnamed
+" set clipboard=unnamed
