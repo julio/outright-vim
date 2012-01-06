@@ -14,6 +14,13 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
+" See https://github.com/nelstrom/vim-textobj-rubyblock/blob/master/README.md
+:runtime macros/matchit.vim
+set nocompatible
+if has("autocmd")
+  filetype indent plugin on
+endif
+
 " Color scheme
 set t_Co=256 " Set 256 colors
 if !has("gui_running")
