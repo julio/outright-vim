@@ -43,6 +43,11 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   set hlsearch
 endif
 
+" Show a vertical line/guard at column 80
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+
 set guifont=Bitstream\ Vera\ Sans\ Mono:h14
 set list listchars=eol:¬,tab:»·,trail:·
 
